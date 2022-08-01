@@ -1,4 +1,4 @@
-import React, {useState, Fragment} from 'react';
+import React, { useState, Fragment } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import DisplayCarbonData from './Components/DisplayCarbonData';
@@ -9,7 +9,6 @@ import NavBar from './Components/NavBar';
 
 import SideBar from './Components/SideBar';
 import { Home } from './screens/Home';
-
 
 export default function App() {
   const [iataCode, setIataCode] = useState([]);

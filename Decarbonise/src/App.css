@@ -1,12 +1,11 @@
 #root {
   margin: 0 auto;
   text-align: center;
+
 }
 
-html{
-  font-size: 62.5%;
-}
-body{
+
+/* body{
  margin-left: 13rem;
  margin-left: 13rem;
 }
@@ -14,4 +13,4 @@ body{
 #img1{
 width: 51.7rem;
 height: 41.8rem;
-}
+} */

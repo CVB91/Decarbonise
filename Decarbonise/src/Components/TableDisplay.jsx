@@ -48,10 +48,10 @@ import { Box } from '@mui/system';
 export default function BasicTable({ flightCarbon, distance, bodyData, onClose }) {
   //   let flightCarbon = carbon;
   //   let flightDistance = 2630.01;
-  //   let departure = bodyData.legs[0].departure_airport;
-  //   let destination = bodyData.legs[0].destination_airport;
-  let departure = 'LGW';
-  let destination = 'TXL';
+    let departure = bodyData.legs[0].departure_airport;
+    let destination = bodyData.legs[0].destination_airport;
+  // let departure = 'LGW';
+  // let destination = 'TXL';
   let flightEquivalent;
 
   const beef = 99.48;

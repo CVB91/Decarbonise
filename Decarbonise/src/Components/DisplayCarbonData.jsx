@@ -1,15 +1,12 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import axios from 'axios';
-import { Button, IconButton } from '@mui/material';
-import CalculateIcon from '@mui/icons-material/Calculate';
-import InfoDisplay from './InfoDisplay';
+import { IconButton } from '@mui/material';
 import { Box } from '@mui/system';
-import { data } from './Data.jsx';
 import Modal from './Modal';
 import BasicTable from './TableDisplay';
 import ClearIcon from '@mui/icons-material/Clear';
 
-const DisplayCarbonData = ({ bodyData, queryCarbon, onClose}) => {
+const DisplayCarbonData = ({ bodyData, queryCarbon, onClose }) => {
   let [carbon, setCarbon] = useState('');
   let [distance, setDistance] = useState('');
 
@@ -28,7 +25,7 @@ const DisplayCarbonData = ({ bodyData, queryCarbon, onClose}) => {
 
       let data = res.data;
       console.log('Carbon', data.data.attributes.carbon_kg);
-      console.log('Carbon', data)
+      console.log('Carbon', data);
       carbon = data.data.attributes.carbon_kg;
       setCarbon(carbon);
       distance = data.data.attributes.distance_value;
@@ -38,28 +35,14 @@ const DisplayCarbonData = ({ bodyData, queryCarbon, onClose}) => {
     }
   }
 
-
-  // function getData(data) {
-    
-  //     console.log('Carbon', data.attributes.carbon_kg);
-  //     console.log('Carbon', data);
-  //     carbon = data.attributes.carbon_kg;
-  //     setCarbon(carbon);
-  //     distance = data.attributes.distance_value;
-  //     setDistance(distance);
-      
-    
-  // }
-
-
   // useEffect(() => {
   //   if (bodyData && queryCarbon) {
   //     getCarbon();
   //   }
-  // },[queryCarbon]);
+  // }, [queryCarbon]);
 
   return (
-    <Modal sx={{ display: "flex", flexDirection:"column" }} onClose={onClose}>
+    <Modal onClose={onClose}>
       <IconButton
         onClick={onClose}
         size='small'

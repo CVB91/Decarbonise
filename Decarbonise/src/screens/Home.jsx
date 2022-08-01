@@ -9,6 +9,7 @@ import renewable from '../assets/renewable.json';
 import teapot from '../assets/teapot.json';
 import flowers from '../assets/flowers.json';
 import garden from '../assets/garden.json';
+import Typical from 'react-typical';
 // import Card from '@mui/material/Card';
 // import CardActions from '@mui/material/CardActions';
 // import CardContent from '@mui/material/CardContent';
@@ -30,18 +31,18 @@ export const Home = () => {
         sx={{
           gridColumnStart: '2',
           gridColumnEnd: 'span 6',
-          gridRowStart: '2',
+          gridRowStart: '1',
           gridRowEnd: '2',
         }}
       >
         <Typography
           sx={{
-            fontSize: '9.6rem',
+            fontSize: '10rem',
             fontWeight: '700',
-            color: '#1e2020',
-            lineHeight: '133px',
+            color: '#083240',
+            lineHeight: '',
             width: '33.44rem',
-            height: '9.06rem',
+            marginTop: "5rem"
           }}
         >
           Decarbonise
@@ -50,16 +51,21 @@ export const Home = () => {
           sx={{
             fontSize: '6rem',
             fontWeight: 'regular',
-            color: '#1e2020',
+            color: '#79B27F',
             lineHeight: '5rem',
             width: '51.1rem',
             height: '12rem',
             textAlign: 'left',
-            marginTop: '5rem',
+            marginTop: '4rem',
             paddingLeft: '0.4rem',
           }}
         >
-         your flights
+         your {' '}
+          <Typical
+            steps={['flights', 3000, 'deliveries', 3000, 'transactions', 3000]}
+            loop={Infinity}
+            wrapper='p'
+          />
         </Typography>
       </Box>
       <Box
@@ -67,7 +73,7 @@ export const Home = () => {
           gridColumnStart: '8',
           gridColumnEnd: 'span 4',
           gridRowStart: '1',
-          marginTop: '10rem',
+          marginTop: '6rem',
           gridRowEnd: 'span 3',
           width: '59.8rem',
           height: '51.7rem',
@@ -80,7 +86,7 @@ export const Home = () => {
         sx={{
           gridColumnStart: '2',
           gridColumnEnd: '2',
-          gridRowStart: '5',
+          gridRowStart: '3',
           gridRowEnd: '5',
           textAlign: 'left',
         }}

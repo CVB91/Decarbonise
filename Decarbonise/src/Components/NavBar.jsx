@@ -12,8 +12,10 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import SpaIcon from '@mui/icons-material/Spa';
+import { Link } from 'react-router-dom';
 
-const pages = ['Home', 'FAQ', 'Flights', 'Deliveries'];
+
+const pages = ['Home', 'FAQ', 'Flights', 'Deliveries', 'Transactions'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const NavBar = () => {
@@ -53,7 +55,7 @@ const NavBar = () => {
               color='inherit'
             >
       
-              <SpaIcon sx={{color:"#1e2020", fontSize:"5rem"}}/>
+              <SpaIcon sx={{color:"#083240",  fontSize:"5rem"}}/>
             </IconButton>
 
             <Menu
@@ -107,12 +109,15 @@ const NavBar = () => {
             }}
           >
             {pages.map((page) => (
-              <Button
+              <Link
+                to={page}
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{
-                  my: 2,
-                  color: '#1e2020',
+                style={{
+                  marginLeft: "2rem",
+                  listStyle: 'none',
+                  textDecoration:'none',
+                  color: "#083240",
                   display: 'block',
                   fontSize: '1.5rem',
                   fontWeight: 'bold',
@@ -120,7 +125,7 @@ const NavBar = () => {
                 }}
               >
                 {page}
-              </Button>
+              </Link>
             ))}
           </Box>
         </Toolbar>
